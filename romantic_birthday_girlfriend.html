@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#702629">
+<title>A Birthday Surprise ♡</title>
+<style>
+:root{--wine:#702629;--wine-dark:#4c191d;--cream:#fff8ef;--paper:#fffdf8;--rose:#b75d60;--muted:#956a68}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:#4a2022;font-family:Georgia,'Times New Roman',serif}
+#hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}.heart{position:absolute;top:-30px;color:var(--rose);opacity:.48;animation:fall linear infinite}@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+main{position:relative;z-index:1;max-width:760px;margin:auto;padding:16px 13px 40px}
+.hero{min-height:91vh;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid #eadbd0;border-radius:22px;padding:25px 16px;background:radial-gradient(circle at 20% 20%,#fff 0 2px,transparent 3px),var(--cream);box-shadow:0 10px 35px #5a25200d}
+.eyebrow{font-family:Arial,sans-serif;letter-spacing:2.5px;text-transform:uppercase;font-size:.7rem;color:var(--wine)}
+h1{font-size:clamp(2.5rem,10vw,4.8rem);line-height:1;margin:15px 0;color:var(--wine);overflow-wrap:anywhere}
+.subtitle{font-size:1.05rem;line-height:1.7;max-width:470px;margin:16px auto}
+.cover{max-width:410px;width:100%;margin:24px auto 18px;background:var(--wine);color:var(--cream);border:7px solid #201819;border-radius:12px;padding:24px 14px;min-height:190px;display:grid;place-content:center;box-shadow:0 12px 0 #d8d1ca}
+.cover .emoji{font-size:3rem}.cover p{margin:8px 0 0}
+.btn{border:0;background:var(--wine);color:white;border-radius:999px;padding:13px 20px;font-size:1rem;cursor:pointer;margin:5px;font-family:Arial,sans-serif;box-shadow:0 4px 0 var(--wine-dark)}.btn.secondary{background:#f3e4da;color:var(--wine);box-shadow:0 4px 0 #d7c3b5}
+section{margin-top:19px;background:var(--paper);border:1px solid #eadbd0;border-radius:19px;padding:23px 16px;box-shadow:0 10px 30px #5a252008}
+h2{text-align:center;color:var(--wine);font-size:clamp(1.7rem,7vw,2.1rem);margin:4px 0 9px}.small{text-align:center;color:var(--muted);font-style:italic;margin:0 0 20px}
+.hidden{display:none!important}.book{display:grid;grid-template-columns:1fr 1fr;gap:10px}.page{background:#fffaf2;border:1px solid #eadbd0;border-radius:12px;padding:15px 10px;min-height:160px;text-align:center;display:flex;flex-direction:column;justify-content:center}.page .big{font-size:2.2rem;color:var(--wine)}.page p{line-height:1.5;font-size:.9rem;margin-bottom:4px}
+.letter{background:#fff9f0;border:1px dashed #c99a91;padding:19px;border-radius:12px;line-height:1.85;white-space:pre-line}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.photo{background:#f4e7dc;padding:8px 8px 15px;transform:rotate(-1deg);box-shadow:0 5px 15px #4b202212}.photo:nth-child(even){transform:rotate(1.5deg)}.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#ead6cf}.photo p{text-align:center;margin:9px 0 0;font-size:.88rem}
+.strip{display:flex;gap:7px;overflow-x:auto;background:#25191a;padding:12px;border-radius:8px}.strip img{width:95px;height:125px;object-fit:cover;border:4px solid #fff;flex:0 0 auto}
+.musicbox{text-align:center;background:#f5e7dc;border-radius:14px;padding:18px}.musicbox .tape{font-size:2.6rem}audio{width:100%;margin-top:10px}.hint{font: .85rem/1.6 Arial,sans-serif;color:#77595a}
+footer{text-align:center;padding:26px 10px;color:#946967;font-size:.9rem}
+@media(max-width:360px){.book{grid-template-columns:1fr}.page{min-height:130px}}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+<main>
+<header class="hero">
+<div>
+<div class="eyebrow">a little surprise, made with love</div>
+<h1>Happy Birthday,
+  "Navyaaaa" 
+  My Favourite Girl♡</h1>
+<p class="subtitle">For the girl who makes ordinary moments feel special. I made this little corner of the internet just for you. ❤️</p>
+<div class="cover"><div class="emoji">💌 📸 💐</div><p>A little surprise for you</p><p style="font-size:.8rem">tap to open your memories</p></div>
+<button class="btn" onclick="openSurprise()">Open your surprise ♡</button>
+</div>
+</header>
+
+<div id="surprise" class="hidden">
+<section id="diary">
+<h2>Our Little Diary 📖</h2><p class="small">little moments, endless memories</p>
+<div class="book">
+<div class="page"><div class="big">🎂</div><h3>Today is all yours</h3><p>Another year of you making the world a little more beautiful.</p></div>
+<div class="page"><div class="big">♡</div><h3>My favourite person</h3><p>Somehow, even the simplest moments become special when they include you.</p></div>
+<div class="page"><div class="big">🌷</div><h3>My wish for you</h3><p>May your days be gentle, your dreams grow bigger, and your heart always feel loved.</p></div>
+<div class="page"><div class="big">✨</div><h3>A little promise</h3><p>I hope you never forget how precious, wonderful, and deeply appreciated you are.</p></div>
+</div>
+</section>
+
+<section id="letter">
+<h2>A Letter For You 💌</h2><p class="small">read this whenever you need a smile</p>
+<div class="letter">Happy Birthday, my love ❤️
+
+I wish I could wrap every bit of happiness in the world and give it to you today. You deserve beautiful mornings, peaceful nights, dreams that come true, and a thousand little reasons to smile.
+
+Thank you for being you. You make ordinary moments feel magical, and I hope this new year of your life brings you as much warmth as you bring into mine.
+
+No matter how busy life gets, I hope you always remember that you matter, your dreams matter, and you deserve to be loved in all the little ways.
+
+Keep smiling, keep shining, and keep being your beautiful self.
+
+With all my love,
+Yourssss budhuuuuuuu♡</div>
+</section>
+
+<section id="photos">
+<h2>Little Moments 📷</h2><p class="small">replace sample images with your own memories</p>
+<div class="gallery">
+<div class="photo"><img src="https:///photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="A sweet memory"><p>my favourite memory ♡</p></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=600&q=80" alt="A happy moment"><p>the happiest moments</p></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=600&q=80" alt="Flowers"><p>flowers for you 🌷</p></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" alt="Birthday celebration"><p>your special day 🎂</p></div>
+</div>
+</section>
+
+<section id="booth">
+<h2>Our Photobooth 🎞️</h2><p class="small">little snapshots, big feelings</p>
+<div class="strip">
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=300&q=80" alt="Memory 1">
+<img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=300&q=80" alt="Memory 2">
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=300&q=80" alt="Memory 3">
+<img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=300&q=80" alt="Memory 4">
+</div>
+</section>
+
+<section id="music">
+<h2>Our Song 🎵</h2><p class="small">a melody that reminds me of you</p>
+<div class="musicbox"><div class="tape">💌 🎶</div><h3>Press play, my love</h3><p class="hint">Add your chosen MP3 file to the website repository and replace SONG_URL below with its file URL. The music will play when you tap play.</p>
+<audio controls preload="none"><source src="https://open.spotify.com/track/6df8sKCZhYFupHOfxTCshS?si=vHBZty0hTya6Uvh50ndmwA&utm_source=copy-link" type="audio/mpeg">Your browser does not support audio.</audio></div>
+</section>
+
+<section style="text-align:center"><h2>One Last Thing… ❤️</h2><p class="subtitle">If I could give you one gift, it would be the chance to see yourself through my eyes. Then you would understand how truly special you are.</p><button class="btn secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to the beginning ↑</button></section>
+</div>
+<footer>made with love, just for you ♡</footer>
+</main>
+<script>
+const hearts=document.getElementById('hearts');
+for(let i=0;i<30;i++){const h=document.createElement('span');h.className='heart';h.textContent=['♥','♡','❤'][i%3];h.style.left=(Math.random()*100)+'%';h.style.animationDuration=(8+Math.random()*12)+'s';h.style.animationDelay=(-Math.random()*18)+'s';h.style.fontSize=(10+Math.random()*17)+'px';hearts.appendChild(h)}
+function openSurprise(){document.getElementById('surprise').classList.remove('hidden');document.getElementById('surprise').scrollIntoView({behavior:'smooth'});}
+</script>
+</body>
+</html>
